@@ -4,237 +4,194 @@
     <meta charset="UTF-8">
     <title>DenKin Transport Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-/* Make the body and text scale nicely */
-body {
-    font-size: 16px;
-    line-height: 1.6;
-}
 
-/* Responsive text for headers */
-h1 {
-    font-size: 2.2em;
-}
-h2 {
-    font-size: 1.8em;
-}
-
-/* Center and resize the services list on small screens */
-@media only screen and (max-width: 768px) {
-    div#booking, div.services-section, ul {
-        width: 90% !important;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    ul li {
-        font-size: 16px;
-        line-height: 2.2;
-    }
-
-    input, button {
-        width: 90% !important;
-        font-size: 16px;
-        padding: 12px !important;
+    <!-- Responsive CSS -->
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #0B1D3A;
+        color: #FFFFFF;
+        text-align: center;
+        margin: 0;
     }
 
     h1 {
-        font-size: 1.8em;
+        color: #FFD700;
+        margin-top: 50px;
+        font-size: 2.2em;
     }
+
     h2 {
-        font-size: 1.5em;
+        color: #FFD700;
+        text-align: center;
+        font-size: 1.8em;
     }
 
     p {
-        font-size: 16px;
-        width: 95% !important;
+        font-size: 18px;
+        margin-top: 10px;
     }
-}
 
-/* Optional: make the Book Now button bigger on phones */
-@media only screen and (max-width: 480px) {
-    a[href="#booking"] {
-        padding: 12px 25px !important;
-        font-size: 16px !important;
+    div.services-section {
+        margin-top: 60px;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
     }
-}
-</style>
 
+    ul {
+        list-style: none;
+        padding: 0;
+        font-size: 18px;
+        line-height: 2.5;
+    }
+
+    ul li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    ul li span {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background: linear-gradient(145deg, #FFD700, #C9A000);
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        margin-right: 12px;
+        border-radius: 3px;
+    }
+
+    input, button {
+        width: 300px;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        border: none;
+    }
+
+    a[href="#booking"], button {
+        background-color: #FFD700;
+        color: #0B1D3A;
+        font-weight: bold;
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 15px 30px;
+    }
+
+    @media only screen and (max-width: 768px) {
+        div.services-section, ul {
+            width: 90% !important;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input, button {
+            width: 90% !important;
+            font-size: 16px;
+            padding: 12px !important;
+        }
+
+        h1 {
+            font-size: 1.8em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: 16px;
+            width: 95% !important;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        a[href="#booking"] {
+            padding: 12px 25px !important;
+            font-size: 16px !important;
+        }
+    }
+    </style>
 </head>
 
-<body style="margin:0; font-family:Arial, sans-serif; background-color:#0B1D3A; color:#FFFFFF;">
+<body>
 
     <!-- HEADER -->
-    <div style="text-align:center; padding-top:50px;">
-        <h1 style="color:#FFD700;">
-            Welcome to DenKin Transport Services
-        </h1>
+    <h1>Welcome to DenKin Transport Services</h1>
 
-        <p style="font-size:18px; width:70%; margin:20px auto; line-height:1.8;">
-            At DenKin Transport, we provide premium executive transport and tour services across Kampala and beyond.
-            With professional drivers, comfortable vehicles, and personalized service, your journey is safe,
-            smooth, and stress-free every time.
-        </p>
+    <p>Premium executive transport and tour services in Kampala, Uganda.</p>
 
-        <a href="#booking"
-           style="background-color:#FFD700; color:#0B1D3A; padding:15px 30px;
-           text-decoration:none; border-radius:5px; font-weight:bold;">
-            Book Now
-        </a>
+    <!-- BOOK NOW BUTTON -->
+    <div style="margin-top:30px;">
+        <a href="#booking">Book Now</a>
     </div>
 
     <!-- SERVICES SECTION -->
-    <div style="margin-top:60px; width:60%; margin-left:auto; margin-right:auto;">
-
-        <!-- HEADING NOW LEFT ALIGNED -->
-        <h2 style="color:#FFD700; text-align:left;">Our Services</h2>
-
-        <ul style="list-style:none; padding:0; font-size:18px; line-height:2.5; text-align:left; margin-top:30px;">
-
-            <li>
-                <span style="display:inline-block; width:14px; height:14px;
-                background:linear-gradient(145deg,#FFD700,#C9A000);
-                box-shadow:2px 2px 4px rgba(0,0,0,0.4);
-                margin-right:12px; border-radius:3px;"></span>
-                Corporate Transport
-            </li>
-
-            <li>
-                <span style="display:inline-block; width:14px; height:14px;
-                background:linear-gradient(145deg,#FFD700,#C9A000);
-                box-shadow:2px 2px 4px rgba(0,0,0,0.4);
-                margin-right:12px; border-radius:3px;"></span>
-                Executive Car Hire
-            </li>
-
-            <li>
-                <span style="display:inline-block; width:14px; height:14px;
-                background:linear-gradient(145deg,#FFD700,#C9A000);
-                box-shadow:2px 2px 4px rgba(0,0,0,0.4);
-                margin-right:12px; border-radius:3px;"></span>
-                Airport Transfers
-            </li>
-
-            <li>
-                <span style="display:inline-block; width:14px; height:14px;
-                background:linear-gradient(145deg,#FFD700,#C9A000);
-                box-shadow:2px 2px 4px rgba(0,0,0,0.4);
-                margin-right:12px; border-radius:3px;"></span>
-                Upcountry Travel
-            </li>
-
-            <li>
-                <span style="display:inline-block; width:14px; height:14px;
-                background:linear-gradient(145deg,#FFD700,#C9A000);
-                box-shadow:2px 2px 4px rgba(0,0,0,0.4);
-                margin-right:12px; border-radius:3px;"></span>
-                City Tours
-            </li>
-
+    <div class="services-section" id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li><span></span>Corporate Transport</li>
+            <li><span></span>Executive Car Hire</li>
+            <li><span></span>Airport Transfers</li>
+            <li><span></span>Upcountry Travel</li>
+            <li><span></span>City Tours</li>
         </ul>
     </div>
 
-    <!-- BOOKING SECTION -->
-<div id="booking" style="margin-top:60px; text-align:center; padding-bottom:60px;">
-
-    <h2 style="color:#FFD700;">Book Your Ride</h2>
-
+    <!-- BOOKING FORM -->
     <form id="bookingForm">
 
-        <input type="text" id="name" placeholder="Full Name" required
-               style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
+        <!-- First and Last Name -->
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" required
+               style="width:140px; padding:10px; margin:10px 5px 10px 0; border-radius:5px; border:none;">
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required
+               style="width:140px; padding:10px; margin:10px 0 10px 5px; border-radius:5px; border:none;"><br>
 
-        <input type="tel" id="phone" placeholder="Phone Number" required
-               style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
+        <!-- Other fields -->
+        <input type="email" id="email" name="email" placeholder="Email Address" required><br>
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required><br>
+        <input type="text" id="pickup" name="pickup" placeholder="Pickup Location" required><br>
+        <input type="text" id="destination" name="destination" placeholder="Destination" required><br>
 
-        <input type="text" id="pickup" placeholder="Pickup Location" required
-               style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
-
-        <input type="text" id="destination" placeholder="Destination" required
-               style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
-
-        <!-- NEW ID TYPE DROPDOWN -->
-        <select id="idType" required
-                style="width:320px; padding:10px; margin:10px; border-radius:5px; border:none;">
-            <option value="">Select ID Type</option>
-            <option value="National ID">National ID</option>
-            <option value="Passport">Passport</option>
-            <option value="Driving Permit">Driving Permit</option>
-            <option value="Other">Other</option>
-        </select><br>
-
-        <!-- NEW ID NUMBER FIELD -->
-        <input type="text" id="idNumber" placeholder="ID Number" required
-               style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
-
-        <!-- PHOTO PROMPT MESSAGE -->
-        <p style="font-size:14px; width:70%; margin:10px auto; color:#CCCCCC;">
-            After submitting, you will be redirected to WhatsApp. 
-            Please attach a clear photo of your ID for security verification.
-        </p>
-
-        <button type="submit"
-                style="background-color:#FFD700; color:#0B1D3A; padding:12px 30px;
-                border:none; border-radius:5px; font-weight:bold;">
-            Submit Booking
-        </button>
+        <button type="submit">Submit Booking</button>
 
     </form>
-</div>
 
-    <!-- WHATSAPP SCRIPT -->
+    <!-- SCRIPT -->
     <script>
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const pickup = document.getElementById('pickup').value;
-            const destination = document.getElementById('destination').value;
-
-            const whatsappNumber = "256756712936";
-
-            const message =
-                "Hello DenKin Transport, my name is " + name +
-                ", my phone is " + phone +
-                ". I want a ride from " + pickup +
-                " to " + destination + ".";
-
-            const url = "https://script.google.com/macros/s/AKfycbw53s1xuLZW7goGmCQLRnUajg_ESVWFUJ4lhUuzBbTOpviczWNO4SLD91wMJgvXbG5i/exec" + whatsappNumber +
-                        "?text=" + encodeURIComponent(message);
-
-            window.open(url, "_blank");
-        });
-    </script>
-<script>
-    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    document.getElementById('bookingForm').addEventListener('submit', function(e){
         e.preventDefault();
 
-        const name = document.getElementById('name').value;
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const name = firstName + " " + lastName;
+
+        const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
         const pickup = document.getElementById('pickup').value;
         const destination = document.getElementById('destination').value;
-        const idType = document.getElementById('idType').value;
-        const idNumber = document.getElementById('idNumber').value;
 
+        // Unique reference
+        const timestamp = Date.now();
+        const ref = "DKT-" + timestamp;
+
+        // WhatsApp
         const whatsappNumber = "256756712936";
+        const message = `Hello DenKin Transport,%0ABooking Ref: ${ref}%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0APickup: ${pickup}%0ADestination: ${destination}`;
+        window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
 
-        const message =
-            "Hello DenKin Transport,%0A%0A" +
-            "Name: " + name + "%0A" +
-            "Phone: " + phone + "%0A" +
-            "Pickup: " + pickup + "%0A" +
-            "Destination: " + destination + "%0A" +
-            "ID Type: " + idType + "%0A" +
-            "ID Number: " + idNumber + "%0A%0A" +
-            "I will attach my ID photo for verification.";
+        // Log to Google Sheet
+        const sheetURL = "YOUR_WEB_APP_URL_HERE"; // <-- REPLACE with your Web App URL
+        fetch(`${sheetURL}?ref=${ref}&name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}&pickup=${encodeURIComponent(pickup)}&destination=${encodeURIComponent(destination)}`)
+            .then(response => console.log("Booking logged:", response))
+            .catch(error => console.error("Error logging booking:", error));
 
-        const url = "https://wa.me/" + whatsappNumber +
-                    "?text=" + message;
-
-        window.open(url, "_blank");
+        // Clear form
+        this.reset();
     });
-</script>
+    </script>
 
 </body>
 </html>
