@@ -4,6 +4,62 @@
     <meta charset="UTF-8">
     <title>DenKin Transport Services</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* Make the body and text scale nicely */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive text for headers */
+h1 {
+    font-size: 2.2em;
+}
+h2 {
+    font-size: 1.8em;
+}
+
+/* Center and resize the services list on small screens */
+@media only screen and (max-width: 768px) {
+    div#booking, div.services-section, ul {
+        width: 90% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    ul li {
+        font-size: 16px;
+        line-height: 2.2;
+    }
+
+    input, button {
+        width: 90% !important;
+        font-size: 16px;
+        padding: 12px !important;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 16px;
+        width: 95% !important;
+    }
+}
+
+/* Optional: make the Book Now button bigger on phones */
+@media only screen and (max-width: 480px) {
+    a[href="#booking"] {
+        padding: 12px 25px !important;
+        font-size: 16px !important;
+    }
+}
+</style>
+
 </head>
 
 <body style="margin:0; font-family:Arial, sans-serif; background-color:#0B1D3A; color:#FFFFFF;">
@@ -79,32 +135,52 @@
     </div>
 
     <!-- BOOKING SECTION -->
-    <div id="booking" style="margin-top:60px; text-align:center; padding-bottom:60px;">
+<div id="booking" style="margin-top:60px; text-align:center; padding-bottom:60px;">
 
-        <h2 style="color:#FFD700;">Book Your Ride</h2>
+    <h2 style="color:#FFD700;">Book Your Ride</h2>
 
-        <form id="bookingForm">
+    <form id="bookingForm">
 
-            <input type="text" id="name" placeholder="Full Name" required
-                   style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
+        <input type="text" id="name" placeholder="Full Name" required
+               style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
 
-            <input type="tel" id="phone" placeholder="Phone Number" required
-                   style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
+        <input type="tel" id="phone" placeholder="Phone Number" required
+               style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
 
-            <input type="text" id="pickup" placeholder="Pickup Location" required
-                   style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
+        <input type="text" id="pickup" placeholder="Pickup Location" required
+               style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
 
-            <input type="text" id="destination" placeholder="Destination" required
-                   style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
+        <input type="text" id="destination" placeholder="Destination" required
+               style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
 
-            <button type="submit"
-                    style="background-color:#FFD700; color:#0B1D3A; padding:12px 30px;
-                    border:none; border-radius:5px; font-weight:bold;">
-                Submit Booking
-            </button>
+        <!-- NEW ID TYPE DROPDOWN -->
+        <select id="idType" required
+                style="width:320px; padding:10px; margin:10px; border-radius:5px; border:none;">
+            <option value="">Select ID Type</option>
+            <option value="National ID">National ID</option>
+            <option value="Passport">Passport</option>
+            <option value="Driving Permit">Driving Permit</option>
+            <option value="Other">Other</option>
+        </select><br>
 
-        </form>
-    </div>
+        <!-- NEW ID NUMBER FIELD -->
+        <input type="text" id="idNumber" placeholder="ID Number" required
+               style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
+
+        <!-- PHOTO PROMPT MESSAGE -->
+        <p style="font-size:14px; width:70%; margin:10px auto; color:#CCCCCC;">
+            After submitting, you will be redirected to WhatsApp. 
+            Please attach a clear photo of your ID for security verification.
+        </p>
+
+        <button type="submit"
+                style="background-color:#FFD700; color:#0B1D3A; padding:12px 30px;
+                border:none; border-radius:5px; font-weight:bold;">
+            Submit Booking
+        </button>
+
+    </form>
+</div>
 
     <!-- WHATSAPP SCRIPT -->
     <script>
@@ -124,12 +200,41 @@
                 ". I want a ride from " + pickup +
                 " to " + destination + ".";
 
-            const url = "https://wa.me/" + whatsappNumber +
+            const url = "https://script.google.com/macros/s/AKfycbw53s1xuLZW7goGmCQLRnUajg_ESVWFUJ4lhUuzBbTOpviczWNO4SLD91wMJgvXbG5i/exec" + whatsappNumber +
                         "?text=" + encodeURIComponent(message);
 
             window.open(url, "_blank");
         });
     </script>
+<script>
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const pickup = document.getElementById('pickup').value;
+        const destination = document.getElementById('destination').value;
+        const idType = document.getElementById('idType').value;
+        const idNumber = document.getElementById('idNumber').value;
+
+        const whatsappNumber = "256756712936";
+
+        const message =
+            "Hello DenKin Transport,%0A%0A" +
+            "Name: " + name + "%0A" +
+            "Phone: " + phone + "%0A" +
+            "Pickup: " + pickup + "%0A" +
+            "Destination: " + destination + "%0A" +
+            "ID Type: " + idType + "%0A" +
+            "ID Number: " + idNumber + "%0A%0A" +
+            "I will attach my ID photo for verification.";
+
+        const url = "https://wa.me/" + whatsappNumber +
+                    "?text=" + message;
+
+        window.open(url, "_blank");
+    });
+</script>
 
 </body>
 </html>
