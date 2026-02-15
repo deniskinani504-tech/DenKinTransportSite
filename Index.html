@@ -1,20 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>DenKin Transport Services</title>
+    <meta charset="UTF-8">
+    <title>DenKin Transport Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="background:#0a1932; color:white; font-family:Arial; text-align:center; padding:40px;">
 
-<h1>DenKin Transport Services</h1>
-<p style="color:#ccc;">Executive Transport Solutions</p>
+<body style="margin:0; font-family:Arial, sans-serif; background-color:#0B1D3A; color:#FFFFFF; text-align:center;">
 
-<a href="https://wa.me/256756712936?text=Hello%20I%20would%20like%20Airport%20Transfer" style="display:block;margin:15px auto;padding:15px;width:250px;background:white;color:#0a1932;text-decoration:none;">Airport Transfer</a>
+    <!-- HEADER -->
+    <h1 style="color:#FFD700; margin-top:50px;">
+        Welcome to DenKin Transport Services
+    </h1>
 
-<a href="https://wa.me/256756712936?text=Hello%20I%20need%20Corporate%20Travel" style="display:block;margin:15px auto;padding:15px;width:250px;background:white;color:#0a1932;text-decoration:none;">Corporate Travel</a>
+    <p style="font-size:18px; margin-top:10px;">
+        Premium executive transport and tour services in Kampala, Uganda.
+    </p>
 
-<a href="https://wa.me/256756712936?text=Hello%20I%20would%20like%20Private%20Hire" style="display:block;margin:15px auto;padding:15px;width:250px;background:white;color:#0a1932;text-decoration:none;">Private Hire</a>
+    <!-- BOOK NOW BUTTON -->
+    <div style="margin-top:30px;">
+        <a href="#booking" id="bookNowBtn"
+           style="background-color:#FFD700; color:#0B1D3A; padding:15px 30px; text-decoration:none; border-radius:5px; font-weight:bold;">
+            Book Now
+        </a>
+    </div>
 
-<a href="https://wa.me/256756712936?text=Hello%20I%20need%20Upcountry%20Executive%20Travel" style="display:block;margin:15px auto;padding:15px;width:250px;background:white;color:#0a1932;text-decoration:none;">Upcountry Travel</a>
+    <!-- SERVICES SECTION -->
+    <div style="margin-top:60px; width:60%; margin-left:auto; margin-right:auto; text-align:left;">
+        <h2 style="color:#FFD700; text-align:center;">Our Services</h2>
+        <ul style="list-style:none; padding:0; font-size:18px; line-height:2.5;">
+
+            <li>
+                <span style="display:inline-block; width:14px; height:14px; 
+                             background:linear-gradient(145deg, #FFD700, #C9A000);
+                             box-shadow:2px 2px 4px rgba(0,0,0,0.4);
+                             margin-right:12px; border-radius:3px;">
+                </span>
+                Corporate Transport
+            </li>
+
+            <li>
+                <span style="display:inline-block; width:14px; height:14px; 
+                             background:linear-gradient(145deg, #FFD700, #C9A000);
+                             box-shadow:2px 2px 4px rgba(0,0,0,0.4);
+                             margin-right:12px; border-radius:3px;">
+                </span>
+                Executive Car Hire
+            </li>
+
+            <li>
+                <span style="display:inline-block; width:14px; height:14px; 
+                             background:linear-gradient(145deg, #FFD700, #C9A000);
+                             box-shadow:2px 2px 4px rgba(0,0,0,0.4);
+                             margin-right:12px; border-radius:3px;">
+                </span>
+                Airport Transfers
+            </li>
+
+            <li>
+                <span style="display:inline-block; width:14px; height:14px; 
+                             background:linear-gradient(145deg, #FFD700, #C9A000);
+                             box-shadow:2px 2px 4px rgba(0,0,0,0.4);
+                             margin-right:12px; border-radius:3px;">
+                </span>
+                Upcountry Travel
+            </li>
+
+            <li>
+                <span style="display:inline-block; width:14px; height:14px; 
+                             background:linear-gradient(145deg, #FFD700, #C9A000);
+                             box-shadow:2px 2px 4px rgba(0,0,0,0.4);
+                             margin-right:12px; border-radius:3px;">
+                </span>
+                City Tours
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- BOOKING FORM -->
+    <div style="margin-top:70px;">
+        <h2 style="color:#FFD700;">Book a Ride</h2>
+
+        <form id="booking" action="https://formsubmit.co/deniskinani504@gmail.com" method="POST">
+            <!-- Hidden _next for FormSubmit redirect -->
+            <input type="hidden" name="_next" value="https://your-landing-page.com/thankyou.html">
+
+            <input type="text" name="name" placeholder="Full Name" required
+                   style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
+
+            <input type="email" name="email" placeholder="Email Address" required
+                   style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
+
+            <input type="tel" name="phone" placeholder="Phone Number" required
+                   style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
+
+            <input type="text" name="pickup" placeholder="Pickup Location" required
+                   style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
+
+            <input type="text" name="destination" placeholder="Destination" required
+                   style="width:300px; padding:10px; margin:10px; border-radius:5px; border:none;"><br>
+
+            <br>
+
+            <button type="submit"
+                    style="background-color:#FFD700; color:#0B1D3A; padding:12px 30px; border:none; border-radius:5px; font-weight:bold;">
+                Submit Booking
+            </button>
+
+        </form>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Smooth scroll for Book Now button
+        const bookBtn = document.getElementById('bookNowBtn');
+        bookBtn.addEventListener('click', function(e){
+            e.preventDefault(); // prevent default jump
+            document.getElementById('booking').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        });
+
+        // WhatsApp auto-fill on form submit
+        const form = document.getElementById('booking');
+        form.addEventListener('submit', function(e) {
+            // Get form values
+            const name = encodeURIComponent(form.name.value);
+            const pickup = encodeURIComponent(form.pickup.value);
+            const destination = encodeURIComponent(form.destination.value);
+
+            // Build WhatsApp link
+            const waNumber = "256756712936"; // your number without +
+            const waMessage = `Hello! I am ${name} and I want to book a ride from ${pickup} to ${destination}`;
+            const waLink = `https://wa.me/${waNumber}?text=${waMessage}`;
+
+            // Open WhatsApp in new tab
+            window.open(waLink, '_blank');
+
+            // Continue to submit to FormSubmit
+            form.submit();
+        });
+    </script>
 
 </body>
 </html>
