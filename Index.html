@@ -1,197 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>DenKin Transport Services</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DenKin Transport Services</title>
 
-    <!-- Responsive CSS -->
-    <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #0B1D3A;
-        color: #FFFFFF;
-        text-align: center;
-        margin: 0;
-    }
+<style>
 
-    h1 {
-        color: #FFD700;
-        margin-top: 50px;
-        font-size: 2.2em;
-    }
+/* ===== GENERAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b1e33;
+    color: #d4af37;
+}
 
-    h2 {
-        color: #FFD700;
-        text-align: center;
-        font-size: 1.8em;
-    }
+html {
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
+}
 
-    p {
-        font-size: 18px;
-        margin-top: 10px;
-    }
+/* ===== NAVBAR ===== */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #0b1e33;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(212,175,55,0.2);
+    z-index: 1000;
+}
 
-    div.services-section {
-        margin-top: 60px;
-        width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
-    }
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    ul {
-        list-style: none;
-        padding: 0;
-        font-size: 18px;
-        line-height: 2.5;
-    }
+header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
 
-    ul li {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
+nav a {
+    color: #d4af37;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 500;
+}
 
-    ul li span {
-        display: inline-block;
-        width: 14px;
-        height: 14px;
-        background: linear-gradient(145deg, #FFD700, #C9A000);
-        box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-        margin-right: 12px;
-        border-radius: 3px;
-    }
+nav a:hover {
+    color: #ffffff;
+}
 
-    input, button {
-        width: 300px;
-        padding: 10px;
-        margin: 10px;
-        border-radius: 5px;
-        border: none;
-    }
+/* Highlighted Book Button */
+nav a.book-btn {
+    background: #d4af37;
+    color: #0b1e33;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: bold;
+}
 
-    a[href="#booking"], button {
-        background-color: #FFD700;
-        color: #0B1D3A;
-        font-weight: bold;
-        border-radius: 5px;
-        text-decoration: none;
-        padding: 15px 30px;
-    }
+nav a.book-btn:hover {
+    background: #b9972e;
+}
 
-    @media only screen and (max-width: 768px) {
-        div.services-section, ul {
-            width: 90% !important;
-            margin-left: auto;
-            margin-right: auto;
-        }
+/* ===== SECTIONS ===== */
+section {
+    padding: 150px 0 120px 0;
+}
 
-        input, button {
-            width: 90% !important;
-            font-size: 16px;
-            padding: 12px !important;
-        }
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
 
-        h1 {
-            font-size: 1.8em;
-        }
+/* ===== HERO ===== */
+#home {
+    text-align: center;
+}
 
-        h2 {
-            font-size: 1.5em;
-        }
+#home h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
 
-        p {
-            font-size: 16px;
-            width: 95% !important;
-        }
-    }
+.section-divider {
+    width: 60px;
+    height: 3px;
+    background: #d4af37;
+    margin: 20px auto 30px auto;
+}
 
-    @media only screen and (max-width: 480px) {
-        a[href="#booking"] {
-            padding: 12px 25px !important;
-            font-size: 16px !important;
-        }
-    }
-    </style>
+#home p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ===== SERVICES ===== */
+#services h2,
+#booking h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#services ul {
+    list-style: none;
+    padding: 0;
+    font-size: 20px;
+    line-height: 2.4;
+    max-width: 500px;
+    margin: 40px auto 0 auto;
+}
+
+#services ul li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 20px;
+}
+
+#services ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    background: #d4af37;
+    transform: rotate(45deg);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+}
+
+/* ===== BOOKING FORM ===== */
+form {
+    max-width: 500px;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 14px;
+    margin-bottom: 18px;
+    border: 1px solid #d4af37;
+    border-radius: 4px;
+    background: #0b1e33;
+    color: #d4af37;
+    font-size: 15px;
+}
+
+input::placeholder {
+    color: #d4af37;
+    opacity: 0.8;
+}
+
+button {
+    background: #d4af37;
+    color: #0b1e33;
+    padding: 14px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #b9972e;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 50px 0;
+    border-top: 1px solid rgba(212,175,55,0.2);
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <h1>Welcome to DenKin Transport Services</h1>
-
-    <p>Premium executive transport and tour services in Kampala, Uganda.</p>
-
-    <!-- BOOK NOW BUTTON -->
-    <div style="margin-top:30px;">
-        <a href="#booking">Book Now</a>
+<header>
+    <div class="nav-container">
+        <h1>DenKin Transport Services</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Our Services</a>
+            <a href="#booking" class="book-btn">Book Now</a>
+        </nav>
     </div>
+</header>
 
-    <!-- SERVICES SECTION -->
-    <div class="services-section" id="services">
+<section id="home">
+    <div class="container">
+        <h2>Premium Executive Transport</h2>
+        <div class="section-divider"></div>
+        <p>
+            Professional, reliable and efficient transportation tailored for
+            corporate, airport and private travel needs.
+        </p>
+    </div>
+</section>
+
+<section id="services">
+    <div class="container">
         <h2>Our Services</h2>
+        <div class="section-divider"></div>
         <ul>
-            <li><span></span>Corporate Transport</li>
-            <li><span></span>Executive Car Hire</li>
-            <li><span></span>Airport Transfers</li>
-            <li><span></span>Upcountry Travel</li>
-            <li><span></span>City Tours</li>
+            <li>Corporate Transport</li>
+            <li>Up-Country Travel</li>
+            <li>Airport Transfers</li>
+            <li>City Tours</li>
         </ul>
     </div>
+</section>
 
-    <!-- BOOKING FORM -->
-    <form id="bookingForm">
+<section id="booking">
+    <div class="container">
+        <h2>Pick-Up & Booking</h2>
+        <div class="section-divider"></div>
 
-        <!-- First and Last Name -->
-        <input type="text" id="firstName" name="firstName" placeholder="First Name" required
-               style="width:140px; padding:10px; margin:10px 5px 10px 0; border-radius:5px; border:none;">
-        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required
-               style="width:140px; padding:10px; margin:10px 0 10px 5px; border-radius:5px; border:none;"><br>
+        <form name="booking" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="booking">
 
-        <!-- Other fields -->
-        <input type="email" id="email" name="email" placeholder="Email Address" required><br>
-        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required><br>
-        <input type="text" id="pickup" name="pickup" placeholder="Pickup Location" required><br>
-        <input type="text" id="destination" name="destination" placeholder="Destination" required><br>
+            <input type="text" name="first-name" placeholder="First Name" required>
+            <input type="text" name="last-name" placeholder="Last Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="pickup" placeholder="Pickup Location" required>
+            <input type="text" name="destination" placeholder="Destination" required>
+            <input type="date" name="date" required>
+            <input type="time" name="time" required>
 
-        <button type="submit">Submit Booking</button>
+            <button type="submit">Submit Booking</button>
+        </form>
+    </div>
+</section>
 
-    </form>
-
-    <!-- SCRIPT -->
-    <script>
-    document.getElementById('bookingForm').addEventListener('submit', function(e){
-        e.preventDefault();
-
-        const firstName = document.getElementById('firstName').value;
-        const lastName = document.getElementById('lastName').value;
-        const name = firstName + " " + lastName;
-
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const pickup = document.getElementById('pickup').value;
-        const destination = document.getElementById('destination').value;
-
-        // Unique reference
-        const timestamp = Date.now();
-        const ref = "DKT-" + timestamp;
-
-        // WhatsApp
-        const whatsappNumber = "256756712936";
-        const message = `Hello DenKin Transport,%0ABooking Ref: ${ref}%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0APickup: ${pickup}%0ADestination: ${destination}`;
-        window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
-
-        // Log to Google Sheet
-        const sheetURL = "YOUR_WEB_APP_URL_HERE"; // <-- REPLACE with your Web App URL
-        fetch(`${sheetURL}?ref=${ref}&name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}&pickup=${encodeURIComponent(pickup)}&destination=${encodeURIComponent(destination)}`)
-            .then(response => console.log("Booking logged:", response))
-            .catch(error => console.error("Error logging booking:", error));
-
-        // Clear form
-        this.reset();
-    });
-    </script>
+<footer>
+    © 2026 DenKin Transport Services. All rights reserved.
+</footer>
 
 </body>
 </html>
